@@ -47,7 +47,7 @@ public class Hunter : MonoBehaviour
 
              float distanceBetweenHunterAndSphere = (transform.position - hitObject.transform.position).magnitude;
          
-            if(c && distanceBetweenHunterAndSphere < 1.0f) {
+            if(c && distanceBetweenHunterAndSphere < 10.0f) {
               Debug.DrawRay(oculusCam.transform.position, oculusCam.transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
             } else {
                 Debug.DrawRay(oculusCam.transform.position, oculusCam.transform.TransformDirection(Vector3.forward) * 1000, Color.white);
@@ -62,11 +62,11 @@ public class Hunter : MonoBehaviour
        
         }
 
-        if (Input.GetKeyDown("1")) {
+        if (Input.GetKeyDown(KeyCode.Return)) {
 
             // check to see hit object is coin object, if it is then add it to the first index of the array, etc
             // or can just do it have an array of 20, add whatever object to the array, then when counting go through the entire array
-            Debug.Log("_____________Key Pressed: 1");
+            Debug.Log("_____________Key Pressed: enter");
             // Debug.Log("Object hit: " + hit.collider.gameObject);
 
             GameObject hitObject = hit.collider.gameObject;
@@ -74,10 +74,12 @@ public class Hunter : MonoBehaviour
 
             float distanceBetweenHunterAndSphere = (transform.position - hitObject.transform.position).magnitude;
             
-            if(c && distanceBetweenHunterAndSphere < 1.0f) {
+            // if(c && distanceBetweenHunterAndSphere < 1.0f) {
+                if(c) {
                 numberOfObjectsCollected++;
                 Destroy(hitObject);
-            }
+                }
+            // }
 
             scoreMessage.text = numberOfObjectsCollected + " ";
 

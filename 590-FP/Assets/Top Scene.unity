@@ -12741,6 +12741,7 @@ GameObject:
   - component: {fileID: 842931704}
   - component: {fileID: 842931703}
   - component: {fileID: 842931702}
+  - component: {fileID: 842931708}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Untagged
@@ -12958,6 +12959,19 @@ Transform:
   m_Father: {fileID: 577098316}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &842931708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842931701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3347fd355244b4f5287a1aa1d7e489b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 0
 --- !u!1 &847535013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2146166496637884721, guid: 3b345b8f6ced949e7a5525d160dc186e,
@@ -27341,6 +27355,7 @@ GameObject:
   - component: {fileID: 1856304320}
   - component: {fileID: 1856304319}
   - component: {fileID: 1856304318}
+  - component: {fileID: 1856304323}
   m_Layer: 0
   m_Name: Collectible (1)
   m_TagString: Untagged
@@ -27558,6 +27573,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856304316}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1856304323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856304316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3347fd355244b4f5287a1aa1d7e489b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 0
 --- !u!1001 &1861911331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29155,13 +29183,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Preset: 8
   Value:
-    LowFreqAbsorption: 0
-    MidFreqAbsorption: 0
-    HighFreqAbsorption: 0
-    Scattering: 0
-    LowFreqTransmission: 0
-    MidFreqTransmission: 0
-    HighFreqTransmission: 0
+    LowFreqAbsorption: 0.11
+    MidFreqAbsorption: 0.07
+    HighFreqAbsorption: 0.06
+    Scattering: 0.05
+    LowFreqTransmission: 0.07
+    MidFreqTransmission: 0.014
+    HighFreqTransmission: 0.005
 --- !u!114 &2005940583
 MonoBehaviour:
   m_ObjectHideFlags: 0
