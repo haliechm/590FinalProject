@@ -9,10 +9,14 @@ public class Hunter : MonoBehaviour
     public GameObject scoreMessageObject;
     public TextMesh winMessage;
     public TextMesh scoreMessage;
+    public GameObject line;
 
     public Camera oculusCam;
 
     private int numberOfObjectsCollected;
+
+
+
 
 
 
@@ -28,6 +32,10 @@ public class Hunter : MonoBehaviour
 
         winMessage.text = "You Win!";
         winMessageObject.SetActive(false);
+
+
+
+     
  
         
         
@@ -39,7 +47,6 @@ public class Hunter : MonoBehaviour
 
 
     RaycastHit hit;
-        // if(Input.GetKeyDown("1")) {
         if (Physics.Raycast(oculusCam.transform.position, oculusCam.transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity )) {
 
             GameObject hitObject = hit.collider.gameObject;
@@ -59,7 +66,12 @@ public class Hunter : MonoBehaviour
        
         }
 
+        if(Input.GetButton("Vertical")) {
+            Instantiate(line, transform.position, transform.rotation);
+        }
+
         if (Input.GetKeyDown(KeyCode.Return)) {
+
 
 
             Debug.Log("_____________Key Pressed: enter");
@@ -87,7 +99,7 @@ public class Hunter : MonoBehaviour
         }
 
         
-
+ 
        
 
         }
