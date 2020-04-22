@@ -273,7 +273,7 @@ MonoBehaviour:
   occlusionMode: 3
   occlusionMethod: 0
   sourceRadius: 1
-  directMixLevel: 1
+  directMixLevel: 0.72
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1
