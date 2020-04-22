@@ -29,6 +29,7 @@ public class BallSound : MonoBehaviour
           audio.Play();
         }
         if(other.gameObject.tag == "HardwoodFloor"){
+            // linearly interpolates 
           audio.volume = Mathf.Lerp(0.1f, 1.0f, impactVelocity/(1.0f-0.1f));
           audio.clip = roll;
           audio.Play();
