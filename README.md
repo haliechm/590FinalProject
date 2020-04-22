@@ -8,6 +8,7 @@ UNC-590 Audio Propagation Final Project
 - Hunter script (in folder Assets -> A8Scripts) controls raycasting/collecting objects using enter key
 - To change the ball that is being launced out go to Assets -> Resources -> MetalBall
 - To change bounciness of ball that is being launched out got to Assets -> Resources -> BouncyBall
+- BallSounds script (Assests->Scripts->BallSound) controls noises ball is making when being launched
 - BallLauncher script attached to FirstPLayer controls projectile being launched out (to find the script go to Assets -> Scripts -> BallLauncher)
 - To make game object invisible just unclick mesh renderer
 - Make the different rooms different materials (i made the one room all metal)
