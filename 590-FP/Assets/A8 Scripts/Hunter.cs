@@ -16,6 +16,7 @@ public class Hunter : MonoBehaviour
 
     private int numberOfObjectsCollected;
     private int numOfLines;
+    private float timeElapsed;
 
 
 
@@ -37,23 +38,19 @@ public class Hunter : MonoBehaviour
         winMessage.text = "You Win!";
         winMessageObject.SetActive(false);
 
+        timeElapsed += Time.deltaTime;
 
 
-
-        
-
-
-
-     
- 
         
         
     }
 
     
     void Update() {
+        timeElapsed += Time.deltaTime;
+        
 
-        numberOfLinesMessage.text = "Number of Steps: " + numOfLines/20;
+        numberOfLinesMessage.text = "Number of Steps: " + numOfLines/20 + "\n Time Elapsed: " + timeElapsed.ToString("N1");
 
 
 
