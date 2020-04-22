@@ -7,6 +7,7 @@ public class Hunter : MonoBehaviour
 
     public GameObject winMessageObject;
     public GameObject scoreMessageObject;
+    public TextMesh numberOfLinesMessage;
     public TextMesh winMessage;
     public TextMesh scoreMessage;
     public GameObject line;
@@ -14,6 +15,7 @@ public class Hunter : MonoBehaviour
     public Camera oculusCam;
 
     private int numberOfObjectsCollected;
+    private int numOfLines;
 
 
 
@@ -26,12 +28,19 @@ public class Hunter : MonoBehaviour
 
         GameObject hunter = GameObject.Find("First Player");
         numberOfObjectsCollected = 0;
+        numOfLines = 0;
         
 
         scoreMessage.text = numberOfObjectsCollected + " ";
+        numberOfLinesMessage.text = "Number of Steps: " + numOfLines/20;
 
         winMessage.text = "You Win!";
         winMessageObject.SetActive(false);
+
+
+
+
+        
 
 
 
@@ -43,6 +52,11 @@ public class Hunter : MonoBehaviour
 
     
     void Update() {
+
+        numberOfLinesMessage.text = "Number of Steps: " + numOfLines/20;
+
+
+
 
 
 
@@ -68,6 +82,12 @@ public class Hunter : MonoBehaviour
 
         if(Input.GetButton("Vertical")) {
             Instantiate(line, transform.position, transform.rotation);
+            numOfLines++;
+        }
+
+          if(Input.GetButton("Horizontal")) {
+            Instantiate(line, transform.position, transform.rotation);
+            numOfLines++;
         }
 
         if (Input.GetKeyDown(KeyCode.Return)) {
