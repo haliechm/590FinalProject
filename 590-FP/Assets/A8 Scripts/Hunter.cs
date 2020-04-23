@@ -6,9 +6,13 @@ public class Hunter : MonoBehaviour
 {
 
 
+// WHEN MAKING ANY WALLS (INVISIBLE OR NOT) MAKE SURE TO SET TAG TO "INVISIBLEWALL" TO MAKE SOUNDS WORK
+// WHEN MAKING ANY FLOORS MAKE SURE TO SET TAG TO "HARDWOOD" FLOOR
+
+
 // numberOfLines is message on top left
 // scoreMessage is message on top right
-// winMessage appears afer you collect 10 objects
+// winMessage appears afer you collect 5 objects
 // startMessage is the message at beginning telling to read to the sign and hit the s key to start
 
     public GameObject winMessageObject;
@@ -58,10 +62,11 @@ public class Hunter : MonoBehaviour
     
     void Update() {
 
-Cursor.visible = false;
+// SETTING CURSOR TO NOT VISIBLE BECAUSE BALL SHOOTS BASED ON WHERE YOU LOOK, NOT WHERE YOUR CURSOR IS
+    Cursor.visible = false;
       
 
-    // HIT THE S KEY TO START (WON'T KEEP TRACK OF STEPS OR START TIME UNTIL USER HAS READ THE SIGN)
+// HIT THE S KEY TO START (WON'T KEEP TRACK OF STEPS OR START TIME UNTIL USER HAS READ THE SIGN)
     if (Input.GetKeyDown(KeyCode.S)) {
         started = true;
         startMessageObject.SetActive(false);
@@ -76,7 +81,7 @@ Cursor.visible = false;
 
 
 // CHECK TO SEE IF USER HAS COLLECTED 10 OBJECTS
-    if (numberOfObjectsCollected >= 1 && notDisplayedYet) {
+    if (numberOfObjectsCollected >= 5 && notDisplayedYet) {
         winMessage.text = "10 Objects Collected\nFinal # of Steps Taken: " + numOfLines/20 + "\nFinal Time Elapsed: " + timeElapsed.ToString("N1");
         winMessageObject.SetActive(true);
         notDisplayedYet = false;
