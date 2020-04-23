@@ -1,7 +1,7 @@
 590FinalProject
 UNC-590 Audio Propagation Final Project
 
-Need To Do:
+**Need To Do:**
 - Add 3 more rooms (each made of a single different material)
 - Add one collectible to each of those rooms (already made collectibles, but can just change audio source)
 - Currenly collecting collectibles using raycast, but need to change to just collect it to when in certain range of object
