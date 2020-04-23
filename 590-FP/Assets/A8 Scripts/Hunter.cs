@@ -74,14 +74,14 @@ public class Hunter : MonoBehaviour
 
     if(started) {
         timeElapsed += Time.deltaTime;
-        numberOfLinesMessage.text = "Number of Steps: " + numOfLines/20 + "\nTime Elapsed: " + timeElapsed.ToString("N1");
+        numberOfLinesMessage.text = "Number of Steps: " + numOfLines/15 + "\nTime Elapsed: " + timeElapsed.ToString("N1");
 
        
 
 
 // CHECK TO SEE IF USER HAS COLLECTED 10 OBJECTS
     if (numberOfObjectsCollected >= 5 && notDisplayedYet) {
-        winMessage.text = "10 Objects Collected\nFinal # of Steps Taken: " + numOfLines/20 + "\nFinal Time Elapsed: " + timeElapsed.ToString("N1");
+        winMessage.text = "10 Objects Collected\nFinal # of Steps Taken: " + numOfLines/15 + "\nFinal Time Elapsed: " + timeElapsed.ToString("N1");
         winMessageObject.SetActive(true);
         notDisplayedYet = false;
         numberOfLinesObject.SetActive(false);
