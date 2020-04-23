@@ -58,6 +58,9 @@ public class Hunter : MonoBehaviour
     
     void Update() {
 
+Cursor.visible = false;
+      
+
     // HIT THE S KEY TO START (WON'T KEEP TRACK OF STEPS OR START TIME UNTIL USER HAS READ THE SIGN)
     if (Input.GetKeyDown(KeyCode.S)) {
         started = true;
@@ -143,6 +146,10 @@ public class Hunter : MonoBehaviour
         }
 
     }
+
+
+
+
    
 
 }
