@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Bag : MonoBehaviour
 {
-    public Things[] collectibles = new Things[4];
-    public int[] count = new int[4];
+    public List<CollectibleTreasure> AudioSpheres;
+    // public int[] count = new int[5];
 }
