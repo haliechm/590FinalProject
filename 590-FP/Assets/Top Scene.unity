@@ -1496,11 +1496,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preset: 8
+  Preset: 11
   Value:
-    LowFreqAbsorption: 0.11
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.6
+    MidFreqAbsorption: 0.72
+    HighFreqAbsorption: 0.63
     Scattering: 0.05
     LowFreqTransmission: 0.07
     MidFreqTransmission: 0.014
@@ -1805,11 +1805,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preset: 8
+  Preset: 11
   Value:
-    LowFreqAbsorption: 0.11
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.6
+    MidFreqAbsorption: 0.72
+    HighFreqAbsorption: 0.63
     Scattering: 0.05
     LowFreqTransmission: 0.07
     MidFreqTransmission: 0.014
@@ -6349,15 +6349,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preset: 8
+  Preset: 11
   Value:
-    LowFreqAbsorption: 0.11
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.53
+    MidFreqAbsorption: 0.82
+    HighFreqAbsorption: 0.71
     Scattering: 0.05
-    LowFreqTransmission: 0.07
-    MidFreqTransmission: 0.014
-    HighFreqTransmission: 0.005
+    LowFreqTransmission: 0.09
+    MidFreqTransmission: 0.025
+    HighFreqTransmission: 0.01
 --- !u!1 &646754609
 GameObject:
   m_ObjectHideFlags: 0
@@ -7683,11 +7683,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preset: 8
+  Preset: 11
   Value:
-    LowFreqAbsorption: 0.11
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.6
+    MidFreqAbsorption: 0.72
+    HighFreqAbsorption: 0.63
     Scattering: 0.05
     LowFreqTransmission: 0.07
     MidFreqTransmission: 0.014
@@ -8200,11 +8200,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preset: 8
+  Preset: 11
   Value:
-    LowFreqAbsorption: 0.11
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.6
+    MidFreqAbsorption: 0.72
+    HighFreqAbsorption: 0.63
     Scattering: 0.05
     LowFreqTransmission: 0.07
     MidFreqTransmission: 0.014
@@ -15218,11 +15218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preset: 8
+  Preset: 11
   Value:
-    LowFreqAbsorption: 0.11
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.6
+    MidFreqAbsorption: 0.72
+    HighFreqAbsorption: 0.63
     Scattering: 0.05
     LowFreqTransmission: 0.07
     MidFreqTransmission: 0.014
@@ -20734,8 +20734,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 200
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
