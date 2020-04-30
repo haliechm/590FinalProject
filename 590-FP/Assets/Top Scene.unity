@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43066603, g: 0.46575898, b: 0.49795288, a: 1}
+  m_IndirectSpecularColor: {r: 0.430666, g: 0.46575904, b: 0.49795318, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5059,7 +5059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roll: {fileID: 8300000, guid: 530d676ce766a488f83c0905539472e7, type: 3}
-  WoodWall: {fileID: 8300000, guid: ba1348ba9e3b3d048b72acaad25f8f8d, type: 3}
+  WoodWall: {fileID: 8300000, guid: 9d721145d10994f26872120d094f05f1, type: 3}
   MetalWall: {fileID: 8300000, guid: 9d721145d10994f26872120d094f05f1, type: 3}
   BrickWall: {fileID: 8300000, guid: d5cc4ca04ed2bbc48aa0d0cf00ee7e78, type: 3}
   CarpetWall: {fileID: 8300000, guid: 6a5a322e75900754d9069bb65de6d5ef, type: 3}

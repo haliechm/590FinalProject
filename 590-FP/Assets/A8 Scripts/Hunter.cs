@@ -43,6 +43,8 @@ public class Hunter : MonoBehaviour {
     // private float totalDistance ;
 
     private DistanceCalc calc;
+     public GameObject wallz;
+     public GameObject wally;
     
 
     public Bag bag;
@@ -131,6 +133,15 @@ public class Hunter : MonoBehaviour {
 
                 // winMessage.text = "5 Objects Collected\nFinal # of Steps Taken: " + numOfLines / 15 + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
                 //numOfSteps.ToString("N1")
+
+
+            // TURN ON TWO WALLS IN GLASS ROOM
+             MeshRenderer mz =wallz.GetComponent<MeshRenderer>();
+            mz.enabled = true;
+            MeshRenderer my =wally.GetComponent<MeshRenderer>();
+            my.enabled = true;
+
+
                 float totalDistanceTravelled = calc.totalDistance;
                 winMessage.text = "5 Objects Collected\nTotal Distance Travelled: " + totalDistanceTravelled.ToString("N3") + " m" + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
                 winMessageObject.SetActive (true);

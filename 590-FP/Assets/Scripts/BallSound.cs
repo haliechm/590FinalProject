@@ -51,7 +51,8 @@ public class BallSound : MonoBehaviour
         // Rolling Sound
         if(other.gameObject.tag == "HardwoodFloor"){
             // linearly interpolates 
-          audio.volume = Mathf.Lerp(0.1f, 1.0f, impactVelocity/(1.0f-0.1f));
+          audio.volume = Mathf.Lerp(0.1f, 0.5f, impactVelocity/(0.5f-0.1f));
+          
           audio.clip = roll;
           audio.Play(0);
         }
