@@ -1,12 +1,10 @@
-590FinalProject
+**590FinalProject**
+---------------------------------
 UNC-590 Audio Propagation Final Project
 
-**Need To Do:**
-- Add 3 more rooms (each made of a single different material)
-- Add one collectible to each of those rooms (already made collectibles, but can just change audio source)
-- Currenly collecting collectibles using raycast, but need to change to just collect it to when in certain range of object
-- Could possibly change roll/hit wall sound (just used first ones i could find so could find better ones probably)
-- User study/data analysis
+Our group made a virtual environment made of 5 rooms with varying materials (wood, metal, brick, carpet, and glass) and put several invisible walls into the scene. The users were tasked with finding 5 invisible audio sources throughout the VE talking as few steps as possible (we emphasized to both groups that the goal is to take as few as steps, not take the least amount of time). We had two groups in our study: one group with a 'beacon' that we made to help navigate the VE and the other group without the 'beacon'. The 'beacon' was simply a ball that was launched from the position of the user and propagated audio when hitting an invisible wall or the floor. Our hypothesis was the group with the 'beacon' would be able to navigate the room better (aka take the fewest number of steps) then the group without it. 
+
+
 
 **wip notes**
 
