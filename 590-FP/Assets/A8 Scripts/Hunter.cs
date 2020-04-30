@@ -16,11 +16,8 @@ public class Hunter : MonoBehaviour {
     // to calculate number of steps:
     // first find average fps throughout entire game (every frame find the sum fps, and also add 1 to counter variable numOfFrames)
     // when collect last item, divide sum fps by numOfFrames to find average fps
-
     // when collect last item, multiply avg fps by (1/25) and multiply by (0.4/1), which will give Avg #frames/step
     // when collect last item, multiply #steps by (1/ avg#frames/step) to find the total number of steps
-
-
     // update function is called every frame
 
     public GameObject winMessageObject;
@@ -77,12 +74,6 @@ public class Hunter : MonoBehaviour {
     void Update () {
 
 
-       
-        // KEEP TRACK OF SUM OF FPS AND NUMBER OF FRAMES TO DO STEP CALCULATION AT END
-        
-
-        // Debug.Log("________FPS" + 1.0/Time.deltaTime);
-
         // SETTING CURSOR TO NOT VISIBLE BECAUSE BALL SHOOTS BASED ON WHERE YOU LOOK, NOT WHERE YOUR CURSOR IS
         Cursor.visible = false;
 
@@ -93,27 +84,30 @@ public class Hunter : MonoBehaviour {
         }
 
         if (started) {
+            // KEEPING TRACK OF FPS VALUES FOR END CALCULATION
             double fps = 1.0/Time.deltaTime;
-        sumOfFPS = sumOfFPS + fps;
-        numOfFrames = numOfFrames + 1;
+            sumOfFPS = sumOfFPS + fps;
+            numOfFrames = numOfFrames + 1;
 
             timeElapsed += Time.deltaTime;
-            numberOfLinesMessage.text = /*"Number of Steps: " + numOfSteps +*/ "\nTime Elapsed: " + timeElapsed.ToString ("N1");
+            numberOfLinesMessage.text = /*"Number of Steps: " + numOfSteps +*/ "Time Elapsed: " + timeElapsed.ToString ("N1");
 
             // CHECK TO SEE IF USER HAS COLLECTED 5 OBJECTS
             if (numberOfObjectsCollected >= 5 && notDisplayedYet) {
 
                 double averageFPS = sumOfFPS / numOfFrames;
-                Debug.Log("___________________AvgFPS" + averageFPS);
-                Debug.Log("___________________numOfFrames" + numOfFrames);
                 double avgFramesPerStep = averageFPS * 5 * (0.762);
-                Debug.Log("___________________AvgFramePerStep " + avgFramesPerStep);
-
-                Debug.Log("_____________numOfLines" + numOfLines);
+               
 
                 // numOfLines counted the number of times user was hitting arrow key during a frame
                 numOfSteps = numOfLines * (1 / avgFramesPerStep);
-                Debug.Log("________numOfSteps" + numOfSteps);
+                
+
+                // Debug.Log("___________________AvgFPS" + averageFPS);
+                // Debug.Log("___________________numOfFrames" + numOfFrames);
+                // Debug.Log("________numOfSteps" + numOfSteps);
+                // Debug.Log("___________________AvgFramePerStep " + avgFramesPerStep);
+                // Debug.Log("_____________numOfLines" + numOfLines);
 
 
 
