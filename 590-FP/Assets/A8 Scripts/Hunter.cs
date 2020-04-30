@@ -38,7 +38,7 @@ public class Hunter : MonoBehaviour {
         numberOfObjectsCollected = 0;
         numOfLines = 0;
 
-        scoreMessage.text = "# of Objects Collected: " + numberOfObjectsCollected;
+        scoreMessage.text = "Halie, Meris, Bea, LJ\n# of Objects Collected: " + numberOfObjectsCollected;
         numberOfLinesMessage.text = "Number of Steps: " + numOfLines / 20 + "\nTime Elapsed: " + timeElapsed.ToString ("N1");
 
         winMessage.text = "You Win!";
@@ -65,9 +65,9 @@ public class Hunter : MonoBehaviour {
             timeElapsed += Time.deltaTime;
             numberOfLinesMessage.text = "Number of Steps: " + numOfLines / 15 + "\nTime Elapsed: " + timeElapsed.ToString ("N1");
 
-            // CHECK TO SEE IF USER HAS COLLECTED 10 OBJECTS
+            // CHECK TO SEE IF USER HAS COLLECTED 5 OBJECTS
             if (numberOfObjectsCollected >= 5 && notDisplayedYet) {
-                winMessage.text = "10 Objects Collected\nFinal # of Steps Taken: " + numOfLines / 15 + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
+                winMessage.text = "5 Objects Collected\nFinal # of Steps Taken: " + numOfLines / 15 + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
                 winMessageObject.SetActive (true);
                 notDisplayedYet = false;
                 numberOfLinesObject.SetActive (false);
@@ -128,7 +128,7 @@ public class Hunter : MonoBehaviour {
                         Destroy (audioSphere.gameObject); //might need to lower distance to maybe less than 1
                         numberOfObjectsCollected++;
                 }
-                scoreMessage.text = "# of Objects Collected: " + numberOfObjectsCollected;
+                scoreMessage.text = "Halie, Meris, Bea, LJ\n# of Objects Collected: " + numberOfObjectsCollected;
             }
         }
     }}

@@ -879,7 +879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &121101699
 Transform:
   m_ObjectHideFlags: 0
@@ -1267,7 +1267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &140215525
 Transform:
   m_ObjectHideFlags: 0
@@ -3126,7 +3126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &364193828
 Transform:
   m_ObjectHideFlags: 0
@@ -5862,7 +5862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &620339056
 Transform:
   m_ObjectHideFlags: 0
@@ -5891,13 +5891,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Preset: 5
   Value:
-    LowFreqAbsorption: 0.2
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.24
+    MidFreqAbsorption: 0.69
+    HighFreqAbsorption: 0.73
     Scattering: 0.05
-    LowFreqTransmission: 0.2
-    MidFreqTransmission: 0.025
-    HighFreqTransmission: 0.01
+    LowFreqTransmission: 0.02
+    MidFreqTransmission: 0.005
+    HighFreqTransmission: 0.003
 --- !u!114 &620339058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7017,7 +7017,8 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661482693}
-  m_Text: "Read the sign and then hit \nthe 's' key before beginning"
+  m_Text: "Read the sign and then hit \nthe 's' key before beginning\n\nHalie, Meris,
+    Bea, LJ"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -9699,7 +9700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &872091466
 Transform:
   m_ObjectHideFlags: 0
@@ -9958,7 +9959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &874086834
 Transform:
   m_ObjectHideFlags: 0
@@ -11826,7 +11827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1013905009
 Transform:
   m_ObjectHideFlags: 0
@@ -14990,7 +14991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1309839874
 Transform:
   m_ObjectHideFlags: 0
@@ -16609,7 +16610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1481812878
 Transform:
   m_ObjectHideFlags: 0
@@ -16638,13 +16639,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Preset: 5
   Value:
-    LowFreqAbsorption: 0.2
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
+    LowFreqAbsorption: 0.24
+    MidFreqAbsorption: 0.69
+    HighFreqAbsorption: 0.73
     Scattering: 0.05
-    LowFreqTransmission: 0.2
-    MidFreqTransmission: 0.025
-    HighFreqTransmission: 0.01
+    LowFreqTransmission: 0.02
+    MidFreqTransmission: 0.005
+    HighFreqTransmission: 0.003
 --- !u!114 &1481812880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16867,7 +16868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1491880788
 Transform:
   m_ObjectHideFlags: 0
@@ -19239,7 +19240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1717907742
 Transform:
   m_ObjectHideFlags: 0
@@ -19497,7 +19498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1726924685
 Transform:
   m_ObjectHideFlags: 0
