@@ -7,7 +7,7 @@ public class DistanceCalc : MonoBehaviour
 
 
     private Vector3 lastPosition ;
-    private float totalDistance ;
+    public float totalDistance ;
     // Start is called before the first frame update
     void Start()
     {

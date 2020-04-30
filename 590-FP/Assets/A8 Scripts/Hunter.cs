@@ -35,20 +35,22 @@ public class Hunter : MonoBehaviour {
     private int numOfLines;
     private float timeElapsed;
 
-    private double numOfSteps;
+    // private double numOfSteps;
 
     // some hacky variables
     private bool notDisplayedYet;
     private bool started;
 
-    private double sumOfFPS;
-    private double numOfFrames;
+    // private double sumOfFPS;
+    // private double numOfFrames;
 
 
     // // https://answers.unity.com/questions/1494589/how-to-measure-the-overall-distance-travelled.html
     // // TRYING TO FIGURE OUR TOTAL DISTANCE TRAVELLED BY USER
     // private Vector3 lastPosition ;
     // private float totalDistance ;
+
+    private DistanceCalc calc;
     
 
     public Bag bag;
@@ -60,7 +62,7 @@ public class Hunter : MonoBehaviour {
         numOfLines = 0;
 
         scoreMessage.text = "Halie, Meris, Bea, LJ\n# of Objects Collected: " + numberOfObjectsCollected;
-        numberOfLinesMessage.text = "Number of Steps: " + numOfLines / 20 + "\nTime Elapsed: " + timeElapsed.ToString ("N1");
+        numberOfLinesMessage.text = "Time Elapsed: " + timeElapsed.ToString ("N1");
 
         winMessage.text = "You Win!";
         winMessageObject.SetActive (false);
@@ -69,14 +71,19 @@ public class Hunter : MonoBehaviour {
         notDisplayedYet = true;
         started = false;
 
-        numOfSteps = 0;
+        // numOfSteps = 0;
 
-        sumOfFPS = 0;
-        numOfFrames = 0;
+        // sumOfFPS = 0;
+        // numOfFrames = 0;
 
 
         // lastPosition = transform.position;
         // totalDistance = 0;
+
+
+        GameObject cea = GameObject.Find("CenterEyeAnchor");
+        calc = cea.GetComponent<DistanceCalc>();
+        
 
 
     }
@@ -102,9 +109,9 @@ public class Hunter : MonoBehaviour {
 
         if (started) {
             // KEEPING TRACK OF FPS VALUES FOR END CALCULATION
-            double fps = 1.0/Time.deltaTime;
-            sumOfFPS = sumOfFPS + fps;
-            numOfFrames = numOfFrames + 1;
+            // double fps = 1.0/Time.deltaTime;
+            // sumOfFPS = sumOfFPS + fps;
+            // numOfFrames = numOfFrames + 1;
 
             timeElapsed += Time.deltaTime;
             numberOfLinesMessage.text = /*"Number of Steps: " + numOfSteps +*/ "Time Elapsed: " + timeElapsed.ToString ("N1");
@@ -114,12 +121,12 @@ public class Hunter : MonoBehaviour {
 
                 //  Debug.Log("____________Total distance travelled:" + totalDistance/10);
 
-                double averageFPS = sumOfFPS / numOfFrames;
-                double avgFramesPerStep = averageFPS * 5 * (0.762);
+                // double averageFPS = sumOfFPS / numOfFrames;
+                // double avgFramesPerStep = averageFPS * 5 * (0.762);
                
 
                 // numOfLines counted the number of times user was hitting arrow key during a frame
-                numOfSteps = numOfLines * (1 / avgFramesPerStep);
+                // numOfSteps = numOfLines * (1 / avgFramesPerStep);
                 
 
                 // Debug.Log("___________________AvgFPS" + averageFPS);
@@ -131,7 +138,9 @@ public class Hunter : MonoBehaviour {
 
 
                 // winMessage.text = "5 Objects Collected\nFinal # of Steps Taken: " + numOfLines / 15 + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
-                winMessage.text = "5 Objects Collected\nFinal # of Steps Taken: " + numOfSteps.ToString("N1")+ "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
+                //numOfSteps.ToString("N1")
+                float totalDistanceTravelled = calc.totalDistance;
+                winMessage.text = "5 Objects Collected\nTotal Distance Travelled: " + totalDistanceTravelled.ToString("N3") + " m" + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
                 winMessageObject.SetActive (true);
                 notDisplayedYet = false;
                 numberOfLinesObject.SetActive (false);
