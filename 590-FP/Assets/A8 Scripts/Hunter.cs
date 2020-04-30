@@ -12,14 +12,6 @@ public class Hunter : MonoBehaviour {
     // startMessage is the message at beginning telling to read to the sign and hit the s key to start
 
 
-
-    // to calculate number of steps:
-    // first find average fps throughout entire game (every frame find the sum fps, and also add 1 to counter variable numOfFrames)
-    // when collect last item, divide sum fps by numOfFrames to find average fps
-    // when collect last item, multiply avg fps by (1/25) and multiply by (0.4/1), which will give Avg #frames/step
-    // when collect last item, multiply #steps by (1/ avg#frames/step) to find the total number of steps
-    // update function is called every frame
-
     public GameObject winMessageObject;
     public GameObject scoreMessageObject;
     public GameObject numberOfLinesObject;
