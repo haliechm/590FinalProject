@@ -6,6 +6,11 @@ TagManager:
   tags:
   - InvisibleWall
   - HardwoodFloor
+  - WoodWall
+  - MetalWall
+  - BrickWall
+  - CarpetWall
+  - GlassWall
   layers:
   - Default
   - TransparentFX
