@@ -43,6 +43,12 @@ public class Hunter : MonoBehaviour {
 
     private double sumOfFPS;
     private double numOfFrames;
+
+
+    // // https://answers.unity.com/questions/1494589/how-to-measure-the-overall-distance-travelled.html
+    // // TRYING TO FIGURE OUR TOTAL DISTANCE TRAVELLED BY USER
+    // private Vector3 lastPosition ;
+    // private float totalDistance ;
     
 
     public Bag bag;
@@ -69,9 +75,20 @@ public class Hunter : MonoBehaviour {
         numOfFrames = 0;
 
 
+        // lastPosition = transform.position;
+        // totalDistance = 0;
+
+
     }
 
     void Update () {
+
+
+
+        // TRYING TO FIGURE OUT DISTANCE TRAVELLED
+        //   float dist = Vector3.Distance(lastPosition, transform.position) ;
+        // totalDistance += dist;
+        // lastPosition = transform.position;
 
 
         // SETTING CURSOR TO NOT VISIBLE BECAUSE BALL SHOOTS BASED ON WHERE YOU LOOK, NOT WHERE YOUR CURSOR IS
@@ -94,6 +111,8 @@ public class Hunter : MonoBehaviour {
 
             // CHECK TO SEE IF USER HAS COLLECTED 5 OBJECTS
             if (numberOfObjectsCollected >= 5 && notDisplayedYet) {
+
+                //  Debug.Log("____________Total distance travelled:" + totalDistance/10);
 
                 double averageFPS = sumOfFPS / numOfFrames;
                 double avgFramesPerStep = averageFPS * 5 * (0.762);
