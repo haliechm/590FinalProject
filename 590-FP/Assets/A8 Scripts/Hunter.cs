@@ -11,6 +11,18 @@ public class Hunter : MonoBehaviour {
     // winMessage appears afer you collect 5 objects
     // startMessage is the message at beginning telling to read to the sign and hit the s key to start
 
+
+
+    // to calculate number of steps:
+    // first find average fps throughout entire game (every frame find the sum fps, and also add 1 to counter variable numOfFrames)
+    // when collect last item, divide sum fps by numOfFrames to find average fps
+
+    // when collect last item, multiply avg fps by (1/25) and multiply by (0.4/1), which will give Avg #frames/step
+    // when collect last item, multiply #steps by (1/ avg#frames/step) to find the total number of steps
+
+
+    // update function is called every frame
+
     public GameObject winMessageObject;
     public GameObject scoreMessageObject;
     public GameObject numberOfLinesObject;
@@ -26,9 +38,15 @@ public class Hunter : MonoBehaviour {
     private int numOfLines;
     private float timeElapsed;
 
+    private double numOfSteps;
+
     // some hacky variables
     private bool notDisplayedYet;
     private bool started;
+
+    private double sumOfFPS;
+    private double numOfFrames;
+    
 
     public Bag bag;
 
@@ -48,26 +66,59 @@ public class Hunter : MonoBehaviour {
         notDisplayedYet = true;
         started = false;
 
+        numOfSteps = 0;
+
+        sumOfFPS = 0;
+        numOfFrames = 0;
+
+
     }
 
     void Update () {
 
+
+       
+        // KEEP TRACK OF SUM OF FPS AND NUMBER OF FRAMES TO DO STEP CALCULATION AT END
+        
+
+        // Debug.Log("________FPS" + 1.0/Time.deltaTime);
+
         // SETTING CURSOR TO NOT VISIBLE BECAUSE BALL SHOOTS BASED ON WHERE YOU LOOK, NOT WHERE YOUR CURSOR IS
         Cursor.visible = false;
 
-        // HIT THE S KEY TO START (WON'T KEEP TRACK OF STEPS OR START TIME UNTIL USER HAS READ THE SIGN)
+        // HIT THE S KEY TO START (WON'T KEEP TRACK OF STEPS OR START TIME UNTIL USER HAS READ THE SIGN AND HIT S)
         if (Input.GetKeyDown (KeyCode.S)) {
             started = true;
             startMessageObject.SetActive (false);
         }
 
         if (started) {
+            double fps = 1.0/Time.deltaTime;
+        sumOfFPS = sumOfFPS + fps;
+        numOfFrames = numOfFrames + 1;
+
             timeElapsed += Time.deltaTime;
-            numberOfLinesMessage.text = "Number of Steps: " + numOfLines / 15 + "\nTime Elapsed: " + timeElapsed.ToString ("N1");
+            numberOfLinesMessage.text = /*"Number of Steps: " + numOfSteps +*/ "\nTime Elapsed: " + timeElapsed.ToString ("N1");
 
             // CHECK TO SEE IF USER HAS COLLECTED 5 OBJECTS
             if (numberOfObjectsCollected >= 5 && notDisplayedYet) {
-                winMessage.text = "5 Objects Collected\nFinal # of Steps Taken: " + numOfLines / 15 + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
+
+                double averageFPS = sumOfFPS / numOfFrames;
+                Debug.Log("___________________AvgFPS" + averageFPS);
+                Debug.Log("___________________numOfFrames" + numOfFrames);
+                double avgFramesPerStep = averageFPS * 5 * (0.762);
+                Debug.Log("___________________AvgFramePerStep " + avgFramesPerStep);
+
+                Debug.Log("_____________numOfLines" + numOfLines);
+
+                // numOfLines counted the number of times user was hitting arrow key during a frame
+                numOfSteps = numOfLines * (1 / avgFramesPerStep);
+                Debug.Log("________numOfSteps" + numOfSteps);
+
+
+
+                // winMessage.text = "5 Objects Collected\nFinal # of Steps Taken: " + numOfLines / 15 + "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
+                winMessage.text = "5 Objects Collected\nFinal # of Steps Taken: " + numOfSteps.ToString("N1")+ "\nFinal Time Elapsed: " + timeElapsed.ToString ("N1");
                 winMessageObject.SetActive (true);
                 notDisplayedYet = false;
                 numberOfLinesObject.SetActive (false);
@@ -98,6 +149,10 @@ public class Hunter : MonoBehaviour {
             if (Input.GetButton ("Vertical")) {
                 Instantiate (line, transform.position, transform.rotation);
                 numOfLines++;
+
+                
+
+                // numOfSteps = numOfLines * spf * .2 * (1/0.4);
             }
 
             if (Input.GetButton ("Horizontal")) {
