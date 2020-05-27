@@ -6,6 +6,7 @@ Our group made a virtual environment made of 5 rooms with varying materials (woo
 
 Research paper link:
 ------------------------
+https://docs.google.com/document/d/1TkO7MzRMJ70VhO8k7_j5pByBQ3LUiwx7FU1ZxAgL8-I/edit?usp=sharing
 
 VE (invisible walls and audio sources are shown):
 --------------------------------
@@ -26,19 +27,6 @@ Team Members:
  <a href="https://github.com/haliechm" target="_blank">**Halie Chmura**</a> | <a href="https://github.com/mbeganovic3" target="_blank">**Meris Beganovic**</a> | <a href="https://github.com/heyaitsbea" target="_blank">**Bea Manaligod**</a> |
  <a href="https://github.com/ljenloe" target="_blank">**LJ Enloe**</a> 
 
-
-
-
-
-**wip notes**
-
-- Hunter script (in folder Assets -> A8Scripts) controls raycasting/collecting objects using enter key
-- To change the ball that is being launched out go to LaunchedBall GO
-- To change bounciness of ball that is being launched out got to Assets -> Resources -> BouncyBall
-- BallSounds script (Assests->Scripts->BallSound) controls noises ball is making when being launched
-- BallLauncher script attached to FirstPLayer controls projectile being launched out (to find the script go to Assets -> Scripts -> BallLauncher)
-- To make game object invisible just unclick mesh renderer
-- Make the different rooms different materials (one of rooms is currently all wood, and other is all metal)
 
 
 
