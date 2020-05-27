@@ -6,7 +6,7 @@ Our group made a virtual environment made of 5 rooms with varying materials (woo
 
 Research paper link:
 ------------------------
-https://docs.google.com/document/d/1TkO7MzRMJ70VhO8k7_j5pByBQ3LUiwx7FU1ZxAgL8-I/edit?usp=sharing
+https://docs.google.com/document/d/1TkO7MzRMJ70VhO8k7_j5pByBQ3LUiwx7FU1ZxAgL8-I/edit?usp
 
 VE (invisible walls and audio sources are shown):
 --------------------------------
